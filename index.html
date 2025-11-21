@@ -1,36 +1,106 @@
 <!DOCTYPE html>
 <html lang="bg">
 <head>
-<meta charset="UTF-8">
-<title>TradeCraft Premium</title>
-<link rel="stylesheet" href="assets/css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TradeCraft – Premium Търговия с Опции</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="translate.js" defer></script>
 </head>
 <body>
+
 <header>
-  <img src="assets/img/logo.png" class="logo">
-  <nav>
-    <a href="#" onclick="setLang('bg')">BG</a> | 
-    <a href="#" onclick="setLang('en')">EN</a>
-  </nav>
+    <div class="logo">
+        <img src="assets/logo.png" alt="TradeCraft Logo">
+        <span>TradeCraft</span>
+    </div>
+
+    <div class="lang-switch">
+        <button onclick="setLang('bg')">BG</button>
+        <button onclick="setLang('en')">EN</button>
+    </div>
 </header>
 
-<section id="hero">
-  <h1 data-bg="TradeCraft – Премиум търговия с опции"
-      data-en="TradeCraft – Premium Options Trading"></h1>
-  <p data-bg="Най-доброто място за обучение и сигнали."
-     data-en="The best place for training and signals."></p>
+<section class="hero">
+    <h1 data-bg="TradeCraft – Премиум търговия с опции" 
+        data-en="TradeCraft – Premium Options Trading Club">
+    </h1>
+
+    <p data-bg="Най-доброто място за обучение, сигнали и пазарен анализ."
+       data-en="The best place for training, signals and market analysis.">
+    </p>
+
+    <a class="btn-primary"
+       href="#pricing"
+       data-bg="Започни 7-дневен безплатен период"
+       data-en="Start 7-Day Free Trial">
+    </a>
 </section>
 
-<section id="about">
-  <h2 data-bg="За нас" data-en="About Us"></h2>
-  <p data-bg="TradeCraft е премиум клуб за търговия."
-     data-en="TradeCraft is a premium trading club."></p>
+<section class="section">
+    <h2 data-bg="За нас" data-en="About Us"></h2>
+
+    <p data-bg="TradeCraft е премиум клуб за обучение и стратегии в търговията с опции. Помагаме на трейдъри да изградят структура, дисциплина и устойчиви резултати."
+       data-en="TradeCraft is a premium club for options trading strategies. We help traders build structure, discipline and consistent results.">
+    </p>
+</section>
+
+<section class="section dark">
+    <h2 data-bg="Какво получаваш" data-en="What You Get"></h2>
+
+    <div class="benefits">
+        <div class="card" data-bg="Сигнали за опции в реално време" data-en="Real-time options signals"></div>
+        <div class="card" data-bg="Дневен и седмичен пазарен анализ" data-en="Daily & weekly market analysis"></div>
+        <div class="card" data-bg="Ексклузивен VIP Telegram канал" data-en="Exclusive VIP Telegram channel"></div>
+        <div class="card" data-bg="Фокус върху управление на риска" data-en="Focus on risk management"></div>
+        <div class="card" data-bg="Стратегии, обяснени стъпка по стъпка" data-en="Step-by-step strategies"></div>
+        <div class="card" data-bg="Общност от активни трейдъри" data-en="Active trader community"></div>
+    </div>
+</section>
+
+<section id="pricing" class="section">
+    <h2 data-bg="Абонамент" data-en="Subscription"></h2>
+
+    <div class="pricing-box">
+        <h3 data-bg="TradeCraft Premium" data-en="TradeCraft Premium"></h3>
+
+        <p class="price" data-bg="49.90€ / месечно" data-en="49.90€ / month"></p>
+
+        <ul>
+            <li data-bg="7-дневен безплатен пробен период" data-en="7-day free trial"></li>
+            <li data-bg="Отказ по всяко време" data-en="Cancel anytime"></li>
+            <li data-bg="Пълен достъп до всички канали и анализи" data-en="Full access to all channels and analysis"></li>
+        </ul>
+
+        <!-- PON AQUÍ TU ENLACE DE STRIPE -->
+        <a class="btn-primary"
+           href="https://buy.stripe.com/9B6dR9dX3ehNg3k4Nh53O02"
+           data-bg="Започни сега"
+           data-en="Start Now"></a>
+    </div>
+</section>
+
+<section class="section dark">
+    <h2 data-bg="Често задавани въпроси" data-en="Frequently Asked Questions"></h2>
+
+    <div class="faq">
+        <p class="q" data-bg="Подходящо ли е за начинаещи?" data-en="Is this suitable for beginners?"></p>
+        <p class="a" data-bg="Да. Стратегиите са обяснени стъпка по стъпка и можеш да следваш сигналите."
+           data-en="Yes. Strategies are explained step-by-step and you can follow the signals."></p>
+
+        <p class="q" data-bg="Мога ли да прекратя по всяко време?" data-en="Can I cancel anytime?"></p>
+        <p class="a" data-bg="Да, няма договори и скрити условия."
+           data-en="Yes, there are no contracts or hidden conditions."></p>
+
+        <p class="q" data-bg="Сигурно ли е плащането?" data-en="Is the payment secure?"></p>
+        <p class="a" data-bg="Да. Плащането се обработва чрез Stripe – един от най-сигурните доставчици в света."
+           data-en="Yes. Payments are processed via Stripe, one of the most secure providers worldwide."></p>
+    </div>
 </section>
 
 <footer>
-  <p>© 2025 TradeCraft</p>
+    <p>© 2025 TradeCraft</p>
 </footer>
 
-<script src="assets/js/app.js"></script>
 </body>
 </html>
