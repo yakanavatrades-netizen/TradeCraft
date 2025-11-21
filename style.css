@@ -235,3 +235,34 @@ footer {
     padding: 10px 0;
     border-bottom: 1px solid #333;
 }
+/* --- Accordion / Submenus --- */
+
+.card {
+    position: relative;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.card:hover {
+    border-color: gold;
+}
+
+.submenu {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: max-height 0.4s ease, opacity 0.3s ease;
+    padding: 0 10px;
+    color: #ddd;
+    font-size: 14px;
+}
+
+.submenu.open {
+    max-height: 400px; /* suficiente espacio */
+    opacity: 1;
+    margin-top: 10px;
+}
+
+.submenu p {
+    margin: 10px 0;
+}
