@@ -8,8 +8,8 @@
     <!-- CSS -->
     <link rel="stylesheet" href="style.css">
 
-    <!-- Script para traducción -->
-    <script src="translate.js" defer></script>
+    <!-- JS -->
+    <script src="app.js" defer></script>
 </head>
 
 <body>
@@ -40,10 +40,10 @@
     </p>
 
     <a class="btn-primary"
-        href="#pricing"
-        data-bg="Започни 7-дневен безплатен период"
-        data-en="Start 7-Day Free Trial">
-        Започни 7-дневен безплатен период
+       href="#pricing"
+       data-bg="Започни 7-дневен безплатен период"
+       data-en="Start 7-Day Free Trial">
+       Започни 7-дневен безплатен период
     </a>
 </section>
 
@@ -51,9 +51,9 @@
 <section class="section">
     <h2 data-bg="За нас" data-en="About Us">За нас</h2>
 
-    <p data-bg="TradeCraft е премиум клуб за обучение и стратегии в търговията с опции. Помагаме на трейдъри да изградят структура, дисциплина и устойчиви резултати."
-       data-en="TradeCraft is a premium club for options trading strategies. We help traders build structure, discipline and consistent results.">
-       TradeCraft е премиум клуб за обучение и стратегии в търговията с опции. Помагаме на трейдъри да изградят структура, дисциплина и устойчиви резултати.
+    <p data-bg="TradeCraft е премиум клуб за обучение и стратегии в търговията с опции."
+       data-en="TradeCraft is a premium club for options trading strategies.">
+        TradeCraft е премиум клуб за обучение и стратегии в търговията с опции.
     </p>
 </section>
 
@@ -63,125 +63,56 @@
 
     <div class="benefits">
 
-        <!-- 1 -->
-        <div class="card"
-            data-bg="Сигнали за опции в реално време"
-            data-en="Real-time options signals">
-            Сигнали за опции в реално време
-        </div>
-        <div class="submenu">
-            <p data-bg="Получаваш точни входове, изходи и целеви нива в реално време."
-               data-en="You receive precise entry, exit and target levels in real time.">
-               Получаваш точни входове, изходи и целеви нива в реално време.
+        <div class="card collapsible" data-target="benefit1">
+            <p data-bg="Сигнали за опции в реално време" data-en="Real-time options signals">
+               Сигнали за опции в реално време
             </p>
+        </div>
+        <div id="benefit1" class="content-box">
+            <p>Тук ще има подробно описание…</p>
         </div>
 
-        <!-- 2 -->
-        <div class="card"
-            data-bg="Дневен и седмичен пазарен анализ"
-            data-en="Daily & weekly market analysis">
-            Дневен и седмичен пазарен анализ
-        </div>
-        <div class="submenu">
-            <p data-bg="Подробен анализ на пазарните условия, ключови зони и очаквания."
-               data-en="Detailed breakdown of current market conditions, key zones and expectations.">
-               Подробен анализ на пазарните условия, ключови зони и очаквания.
+        <div class="card collapsible" data-target="benefit2">
+            <p data-bg="Дневен и седмичен пазарен анализ" data-en="Daily & weekly analysis">
+                Дневен и седмичен пазарен анализ
             </p>
+        </div>
+        <div id="benefit2" class="content-box">
+            <p>Тук ще има подробно описание…</p>
         </div>
 
-        <!-- 3 -->
-        <div class="card"
-            data-bg="Ексклузивен VIP Telegram канал"
-            data-en="Exclusive VIP Telegram channel">
-            Ексклузивен VIP Telegram канал
-        </div>
-        <div class="submenu">
-            <p data-bg="Достъп до общност от трейдъри, идеи и пазарни сигнали."
-               data-en="Access to trader community, ideas and market signals.">
-               Достъп до общност от трейдъри, идеи и пазарни сигнали.
+        <div class="card collapsible" data-target="benefit3">
+            <p data-bg="Ексклузивен VIP Telegram канал" data-en="Exclusive VIP channel">
+                Ексклузивен VIP Telegram канал
             </p>
         </div>
-
-        <!-- 4 -->
-        <div class="card"
-            data-bg="Фокус върху управление на риска"
-            data-en="Focus on risk management">
-            Фокус върху управление на риска
-        </div>
-        <div class="submenu">
-            <p data-bg="Научаваш как да контролираш риска и да запазиш капитала си."
-               data-en="Learn how to control risk and protect your capital.">
-               Научаваш как да контролираш риска и да запазиш капитала си.
-            </p>
-        </div>
-
-        <!-- 5 -->
-        <div class="card"
-            data-bg="Стратегии, обяснени стъпка по стъпка"
-            data-en="Step-by-step strategies">
-            Стратегии, обяснени стъпка по стъпка
-        </div>
-        <div class="submenu">
-            <p data-bg="Подробни обяснения с примери за търговия."
-               data-en="Full breakdowns with examples of trades.">
-               Подробни обяснения с примери за търговия.
-            </p>
-        </div>
-
-        <!-- 6 -->
-        <div class="card"
-            data-bg="Общност от активни трейдъри"
-            data-en="Active trader community">
-            Общност от активни трейдъри
-        </div>
-        <div class="submenu">
-            <p data-bg="Споделени идеи, анализи и подкрепа от опитни трейдъри."
-               data-en="Shared ideas, analysis and support from experienced traders.">
-               Споделени идеи, анализи и подкрепа от опитни трейдъри.
-            </p>
+        <div id="benefit3" class="content-box">
+            <p>Тук ще има подробно описание…</p>
         </div>
 
     </div>
 </section>
 
+<!-- OPTIONS 101 -->
+<section class="section" id="options101">
+    <h2 data-bg="Опции 101 – Какво представляват?" data-en="Options 101 – What Are Options?"></h2>
 
-        <div class="card"
-            data-bg="Сигнали за опции в реално време"
-            data-en="Real-time options signals">
-            Сигнали за опции в реално време
-        </div>
-
-        <div class="card"
-            data-bg="Дневен и седмичен пазарен анализ"
-            data-en="Daily & weekly market analysis">
-            Дневен и седмичен пазарен анализ
-        </div>
-
-        <div class="card"
-            data-bg="Ексклузивен VIP Telegram канал"
-            data-en="Exclusive VIP Telegram channel">
-            Ексклузивен VIP Telegram канал
-        </div>
-
-        <div class="card"
-            data-bg="Фокус върху управление на риска"
-            data-en="Focus on risk management">
-            Фокус върху управление на риска
-        </div>
-
-        <div class="card"
-            data-bg="Стратегии, обяснени стъпка по стъпка"
-            data-en="Step-by-step strategies">
-            Стратегии, обяснени стъпка по стъпка
-        </div>
-
-        <div class="card"
-            data-bg="Общност от активни трейдъри"
-            data-en="Active trader community">
-            Общност от активни трейдъри
-        </div>
-
+    <div class="card collapsible" data-target="opt1">
+        <h3 data-bg="CALL опции" data-en="CALL Options"></h3>
     </div>
+    <div id="opt1" class="content-box">
+        <p data-bg="CALL ти дава правото да купиш актив."
+           data-en="CALL gives you the right to buy an asset."></p>
+    </div>
+
+    <div class="card collapsible" data-target="opt2">
+        <h3 data-bg="PUT опции" data-en="PUT Options"></h3>
+    </div>
+    <div id="opt2" class="content-box">
+        <p data-bg="PUT ти дава правото да продадеш актив."
+           data-en="PUT gives you the right to sell an asset."></p>
+    </div>
+
 </section>
 
 <!-- PRICING -->
@@ -189,156 +120,19 @@
     <h2 data-bg="Абонамент" data-en="Subscription">Абонамент</h2>
 
     <div class="pricing-box">
-
-        <h3 data-bg="TradeCraft Premium" data-en="TradeCraft Premium">
-            TradeCraft Premium
-        </h3>
-
-        <p class="price"
-           data-bg="49.90€ / месечно"
-           data-en="49.90€ / month">
-           49.90€ / месечно
-        </p>
+        <h3>TradeCraft Premium</h3>
+        <p class="price">49.90€ / месечно</p>
 
         <ul>
-            <li data-bg="7-дневен безплатен пробен период" data-en="7-day free trial">
-                7-дневен безплатен пробен период
-            </li>
-
-            <li data-bg="Отказ по всяко време" data-en="Cancel anytime">
-                Отказ по всяко време
-            </li>
-
-            <li data-bg="Пълен достъп до всички канали и анализи" data-en="Full access to all channels and analysis">
-                Пълен достъп до всички канали и анализи
-            </li>
+            <li>7-дневен безплатен пробен период</li>
+            <li>Отказ по всяко време</li>
+            <li>Пълен достъп до всички канали</li>
         </ul>
 
-        <a class="btn-primary"
-           href="https://buy.stripe.com/9B6dR9dX3ehNg3k4Nh53O02"
-           data-bg="Започни сега"
-           data-en="Start Now">
-           Започни сега
+        <a class="btn-primary" href="https://buy.stripe.com/9B6dR9dX3ehNg3k4Nh53O02">
+            Започни сега
         </a>
-
     </div>
-</section>
-
-<!-- FAQ -->
-<section class="section dark">
-    <h2 data-bg="Често задавани въпроси" data-en="Frequently Asked Questions">
-        Често задавани въпроси
-    </h2>
-
-    <div class="faq">
-
-        <p class="q"
-           data-bg="Подходящо ли е за начинаещи?"
-           data-en="Is this suitable for beginners?">
-           Подходящо ли е за начинаещи?
-        </p>
-
-        <p class="a"
-           data-bg="Да. Стратегиите са обяснени стъпка по стъпка и можеш да следваш сигналите."
-           data-en="Yes. Strategies are explained step-by-step and you can follow the signals.">
-           Да. Стратегиите са обяснени стъпка по стъпка и можеш да следваш сигналите.
-        </p>
-
-        <p class="q"
-           data-bg="Мога ли да прекратя по всяко време?"
-           data-en="Can I cancel anytime?">
-           Мога ли да прекратя по всяко време?
-        </p>
-
-        <p class="a"
-           data-bg="Да, няма договори и скрити условия."
-           data-en="Yes, there are no contracts or hidden conditions.">
-           Да, няма договори и скрити условия.
-        </p>
-
-        <p class="q"
-           data-bg="Сигурно ли е плащането?"
-           data-en="Is the payment secure?">
-           Сигурно ли е плащането?
-        </p>
-
-        <p class="a"
-           data-bg="Да. Плащането се обработва чрез Stripe – един от най-сигурните доставчици в света."
-           data-en="Yes. Payments are processed via Stripe, one of the most secure providers worldwide.">
-           Да. Плащането се обработва чрез Stripe – един от най-сигурните доставчици в света.
-        </p>
-
-    </div>
-</section>
-
-<!-- OPTIONS 101 (NUEVA SECCIÓN) -->
-<section class="section" id="options101">
-    <h2 data-bg="Опции 101 – Какво представляват?"
-        data-en="Options 101 – What Are Options?"></h2>
-
-    <p data-bg="Опциите са финансови договори, които ти дават правото, но не и задължението, да купиш или продадеш актив на предварително определена цена."
-       data-en="Options are financial contracts that give you the right, but not the obligation, to buy or sell an asset at a predetermined price.">
-       Опциите са финансови договори, които ти дават правото, но не и задължението...
-    </p>
-
-    <div class="info-grid">
-
-        <div class="info-card">
-            <h3 data-bg="CALL опции" data-en="CALL Options">CALL опции</h3>
-            <p data-bg="CALL ти дава правото да купиш актив на фиксирана цена..."
-               data-en="A CALL gives you the right to buy an asset...">
-               CALL ти дава правото да купиш актив на фиксирана цена...
-            </p>
-        </div>
-
-        <div class="info-card">
-            <h3 data-bg="PUT опции" data-en="PUT Options">PUT опции</h3>
-            <p data-bg="PUT ти дава правото да продадеш актив..."
-               data-en="A PUT gives you the right to sell an asset...">
-               PUT ти дава правото да продадеш актив...
-            </p>
-        </div>
-
-        <div class="info-card">
-            <h3 data-bg="Страйк цена" data-en="Strike Price">Страйк цена</h3>
-            <p data-bg="Цената, на която можеш да купиш или продадеш актива..."
-               data-en="The price at which you can buy/sell the asset...">
-               Цената, на която можеш да купиш или продадеш актива...
-            </p>
-        </div>
-
-        <div class="info-card">
-            <h3 data-bg="Експирация" data-en="Expiration">Експирация</h3>
-            <p data-bg="Моментът, в който договорът изтича..."
-               data-en="Expiration is the moment the contract expires...">
-               Моментът, в който договорът изтича...
-            </p>
-        </div>
-    </div>
-
-    <h2 data-bg="Как се търгуват опциите?"
-        data-en="How to Trade Options?">
-        Как се търгуват опциите?
-    </h2>
-
-    <ul class="steps">
-        <li data-bg="1. Избираш актив (SPY, QQQ...)"
-            data-en="1. Choose an asset (SPY, QQQ...)">
-            1. Избираш актив (SPY, QQQ...)
-        </li>
-        <li data-bg="2. CALL или PUT"
-            data-en="2. CALL or PUT">
-            2. CALL или PUT
-        </li>
-        <li data-bg="3. Страйк и експирация"
-            data-en="3. Strike and expiration">
-            3. Страйк и експирация
-        </li>
-        <li data-bg="4. Управление на риска"
-            data-en="4. Risk management">
-            4. Управление на риска
-        </li>
-    </ul>
 </section>
 
 <!-- FOOTER -->
