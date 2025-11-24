@@ -1,6 +1,5 @@
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="bg">
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -18,18 +17,18 @@ body{margin:0;font-family:'Inter',sans-serif;background:#0c1015;color:white;}
 
 <!-- TAB BAR -->
 <div style="position:fixed;top:0;width:100%;background:#07131c;padding:12px;display:flex;gap:20px;z-index:9999;">
-<button class="tabBtn" onclick="openTab('homeTab')">Home</button>
-<button class="tabBtn" onclick="openTab('dashboardTab')">Dashboard</button>
-<button class="tabBtn" onclick="openTab('signalsTab')">Signals</button>
-<button class="tabBtn" onclick="openTab('videosTab')">Videos</button>
-<button class="tabBtn" onclick="openTab('reportsTab')">Reports</button>
-<button class="tabBtn" onclick="openTab('learningTab')">Learning</button>
-<button class="tabBtn" onclick="openTab('adminTab')">Admin</button>
-<button class="tabBtn" onclick="openTab('communityTab')">Community</button>
+<button class="tabBtn" onclick="openTab('homeTab')">Начало</button>
+<button class="tabBtn" onclick="openTab('dashboardTab')">Табло</button>
+<button class="tabBtn" onclick="openTab('signalsTab')">Сигнали</button>
+<button class="tabBtn" onclick="openTab('videosTab')">Видео</button>
+<button class="tabBtn" onclick="openTab('reportsTab')">Доклади</button>
+<button class="tabBtn" onclick="openTab('learningTab')">Обучение</button>
+<button class="tabBtn" onclick="openTab('adminTab')">Админ</button>
+<button class="tabBtn" onclick="openTab('communityTab')">Общност</button>
 </div>
 
 <script>
-function hideAllTabs(){['homeTab','dashboardTab','signalsTab','videosTab','reportsTab','learningTab','adminTab'].forEach(id=>document.getElementById(id).style.display='none');}
+function hideAllTabs(){['homeTab','dashboardTab','signalsTab','videosTab','reportsTab','learningTab','adminTab','communityTab'].forEach(id=>document.getElementById(id).style.display='none');}
 function openTab(tab){hideAllTabs();document.getElementById(tab).style.display='block';}
 window.onload=()=>openTab('homeTab');
 </script>
@@ -37,33 +36,34 @@ window.onload=()=>openTab('homeTab');
 <!-- HOME TAB -->
 <div id="homeTab" class="section">
   <h1>Atlantis Trade Group</h1>
-  <p>A private trading circle focused on long‑term consistency and professional education.</p>
-  <h2>Membership Plans</h2>
-  <div class="card">Monthly – 119€</div>
-  <div class="card">Quarterly – 300€</div>
-  <div class="card">Annual – 999€</div>
+  <p>Частен търговски клуб, фокусиран върху последователност, професионализъм и дългосрочно развитие.</p>
+
+  <h2>Абонаментни планове</h2>
+  <div class="card">Месечен – 119€</div>
+  <div class="card">Тримесечен – 300€</div>
+  <div class="card">Годишен – 999€</div>
 </div>
 
 <!-- DASHBOARD TAB -->
 <div id="dashboardTab" class="section" style="display:none;">
-  <h2>Dashboard Overview</h2>
-  <div class="card">Daily Market Video Access</div>
-  <div class="card">Macro Reports</div>
-  <div class="card">Education Library</div>
-  <div class="card">Community Chat</div>
+  <h2>Табло – Преглед</h2>
+  <div class="card">Дневно видео за пазара</div>
+  <div class="card">Макро доклади</div>
+  <div class="card">Образователна библиотека</div>
+  <div class="card">Чат с общността</div>
 </div>
 
 <!-- SIGNALS TAB -->
 <div id="signalsTab" class="section" style="display:none;">
-<h2>Signals</h2>
-<div class="card"><h3>Card-Based Signal</h3><p>GBP/USD Short Setup...</p></div>
-<div class="card"><h3>Institutional Table Format</h3><p>XAU/USD Long...</p></div>
-<div class="card"><h3>Advanced Breakdown</h3><p>USD/JPY Institutional Analysis...</p></div>
+<h2>Търговски сигнали</h2>
+<div class="card"><h3>Сигнал карта</h3><p>GBP/USD къса позиция...</p></div>
+<div class="card"><h3>Институционална таблица</h3><p>XAU/USD дълга позиция...</p></div>
+<div class="card"><h3>Технически анализ</h3><p>USD/JPY институционален разбор...</p></div>
 </div>
 
 <!-- VIDEOS TAB -->
 <div id="videosTab" class="section" style="display:none;">
-<h2>Daily Video Player</h2>
+<h2>Дневно видео</h2>
 <div class="card">
 <video controls style="width:100%;height:320px;background:#000;"><source src="/videos/daily-briefing.mp4" type="video/mp4"></video>
 </div>
@@ -71,61 +71,75 @@ window.onload=()=>openTab('homeTab');
 
 <!-- REPORTS TAB -->
 <div id="reportsTab" class="section" style="display:none;">
-<h2>Reports</h2>
-<div class="card"><h3>Weekly Institutional Report</h3><p>Macro analysis and liquidity levels.</p></div>
+<h2>Доклади</h2>
+<div class="card"><h3>Седмичен институционален доклад</h3><p>Макро анализ, ликвидност и ключови нива.</p></div>
 </div>
 
 <!-- LEARNING TAB -->
 <div id="learningTab" class="section" style="display:none;">
-<h2>Learning Center</h2>
-<div class="card"><h3>Foundational Course</h3><p>Market structure and institutional logic.</p></div>
+<h2>Обучителен център</h2>
+<div class="card"><h3>Основен курс</h3><p>Пазарна структура и институционална логика.</p></div>
 </div>
 
 <!-- ADMIN TAB -->
 <div id="adminTab" class="section" style="display:none;">
-<h2>Admin Panel</h2>
-<div class="card">Add Signals / Upload Video / Manage Users</div>
+<h2>Административен панел</h2>
+<div class="card">Добавяне на сигнали / Качване на видео / Управление на потребители</div>
 </div>
 
 <!-- COMMUNITY TAB -->
 <div id="communityTab" class="section" style="display:none;">
-<h2>Community Chat</h2>
-<div class="card" style="margin-bottom:30px;">
-<h3>Access Restricted</h3>
-<p>You must have an active membership to access the community chat channels.</p>
-<a href="#plans" class="cta-btn">Upgrade Membership</a>
+<h2>Общностен чат</h2>
+<div class="card" style="margin-bottom:20px;">
+<h3>Само за абонати</h3>
+<p>Трябва да имате активен абонамент за достъп до чат канала.</p>
+<a href="#plans" class="cta-btn">Актуализирай абонамент</a>
 </div>
-<div class="card" style="background:#0e1621; padding:0; display:flex; height:500px; border-radius:12px;">
-<!-- CHANNEL LIST -->
-<div style="width:220px; background:#131a22; border-right:1px solid #1f2d3a; padding:15px;">
-<h3 style="margin-bottom:15px; color:var(--primary); font-size:18px;">Channels</h3>
-<p onclick="switchChannel('general')" style="cursor:pointer;"># general</p>
-<p onclick="switchChannel('market')" style="cursor:pointer;"># market-analysis</p>
-<p onclick="switchChannel('setups')" style="cursor:pointer;"># trade-setups</p>
-<p onclick="switchChannel('crypto')" style="cursor:pointer;"># crypto-talk</p>
-<p onclick="switchChannel('support')" style="cursor:pointer;"># support</p>
+
+<div class="card" style="background:#0e1621; padding:0; display:flex; height:520px; border-radius:12px;">
+
+<!-- LEFT SIDEBAR -->
+<div style="width:240px; background:#131a22; border-right:1px solid #1f2d3a; padding:15px; display:flex; flex-direction:column;">
+<h3 style="margin-bottom:15px; color:var(--primary); font-size:18px;">Канали</h3>
+<p onclick="switchChannel('general')" style="cursor:pointer;"># общ</p>
+<p onclick="switchChannel('market')" style="cursor:pointer;"># пазарен-анализ</p>
+<p onclick="switchChannel('setups')" style="cursor:pointer;"># търговски-сетъпи</p>
+<p onclick="switchChannel('crypto')" style="cursor:pointer;"># крипто</p>
+<p onclick="switchChannel('support')" style="cursor:pointer;"># поддръжка</p>
+
+<h3 style="margin-top:25px; color:var(--primary); font-size:18px;">Потребители онлайн</h3>
+<div id="userList" style="color:#cbd3da; font-size:14px;">
+<p>🟢 Admin</p>
+<p>🟢 Moderator</p>
+<p>🟢 Analyst01</p>
+<p>🟢 Member42</p>
 </div>
-<!-- CHAT WINDOW -->
+</div>
+
+<!-- CHAT AREA -->
 <div style="flex:1; display:flex; flex-direction:column;">
 <div id="communityMessages" style="flex:1; padding:15px; overflow-y:auto; color:#cbd3da;">
-<p><strong>System:</strong> Welcome to the members-only chat. Select a channel to begin.</p>
+<p><strong>System:</strong> Добре дошли! Изберете канал, за да започнете.</p>
 </div>
-<div style="padding:12px; border-top:1px solid #1f2d3a; display:flex; gap:6px;">
-<input id="communityInput" type="text" placeholder="Type a message..." style="flex:1; padding:10px; border-radius:6px; border:none; background:#1f2d3a; color:white;">
-<button onclick="sendCommunity()" style="background:var(--primary); border:none; padding:10px 14px; border-radius:6px; color:white; cursor:pointer;">Send</button>
+
+<!-- INPUT BAR -->
+<div style="padding:12px; border-top:1px solid #1f2d3a; display:flex; gap:6px; background:#0d1217;">
+<input id="communityInput" type="text" placeholder="Въведете съобщение..." style="flex:1; padding:10px; border-radius:6px; border:none; background:#1f2d3a; color:white;">
+<button onclick="sendCommunity()" style="background:var(--primary); border:none; padding:10px 14px; border-radius:6px; color:white; cursor:pointer;">Изпрати</button>
 </div>
 </div>
 </div>
 </div>
+
 <script>
 let currentChannel = 'general';
-let roles = { user:'Member', admin:'Admin', mod:'Moderator' };
-let activeRole = 'Member';
+let activeRole = 'Член';
+let fakeUsers = ['Анализатор01','CryptoNinja','PipHunter','ScalperX'];
 
 function switchChannel(ch){
   currentChannel = ch;
   const box = document.getElementById('communityMessages');
-  box.innerHTML = `<p><strong>System:</strong> Joined #${ch} channel.</p>`;
+  box.innerHTML = `<p><strong>System:</strong> Присъединихте се към #${ch}</p>`;
 }
 
 function sendCommunity(){
@@ -136,43 +150,11 @@ function sendCommunity(){
   input.value = '';
   box.scrollTop = box.scrollHeight;
 
-  // Simulated realtime reply
   setTimeout(()=>{
-    box.innerHTML += `<p><strong>Bot:</strong> Message received in #${currentChannel}</p>`;
+    let user = fakeUsers[Math.floor(Math.random()*fakeUsers.length)];
+    box.innerHTML += `<p><strong>${user}:</strong> Благодарим за съобщението в #${currentChannel}!</p>`;
     box.scrollTop = box.scrollHeight;
-  }, 700);
-}
-</script>
-<div class="card" style="background:#0e1621; padding:0; display:flex; height:500px; border-radius:12px;">
-<!-- CHANNEL LIST -->
-<div style="width:220px; background:#131a22; border-right:1px solid #1f2d3a; padding:15px;">
-<h3 style="margin-bottom:15px; color:var(--primary); font-size:18px;">Channels</h3>
-<p># general</p>
-<p># market-analysis</p>
-<p># trade-setups</p>
-<p># crypto-talk</p>
-<p># support</p>
-</div>
-<!-- CHAT WINDOW -->
-<div style="flex:1; display:flex; flex-direction:column;">
-<div id="communityMessages" style="flex:1; padding:15px; overflow-y:auto; color:#cbd3da;">
-<p><strong>System:</strong> Welcome to the members-only chat. Join a channel to start talking.</p>
-</div>
-<div style="padding:12px; border-top:1px solid #1f2d3a; display:flex; gap:6px;">
-<input id="communityInput" type="text" placeholder="Type a message..." style="flex:1; padding:10px; border-radius:6px; border:none; background:#1f2d3a; color:white;">
-<button onclick="sendCommunity()" style="background:var(--primary); border:none; padding:10px 14px; border-radius:6px; color:white; cursor:pointer;">Send</button>
-</div>
-</div>
-</div>
-</div>
-<script>
-function sendCommunity(){
- let input = document.getElementById('communityInput');
- if(!input.value.trim()) return;
- const box = document.getElementById('communityMessages');
- box.innerHTML += `<p><strong>You:</strong> ${input.value}</p>`;
- input.value = '';
- box.scrollTop = box.scrollHeight;
+  },800);
 }
 </script>
 
