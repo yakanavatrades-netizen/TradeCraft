@@ -332,7 +332,7 @@
 
   <!-- LOGIN / REGISTER -->
   <section class="section" id="login">
-    <h2>Member Login (Role-Based Access)</h2>
+    <h2>Member Login (Simulated Auth) (Role-Based Access)</h2>
     <div class="card" style="border-radius:4px; max-width:500px; margin:auto;">
       <p>Email:</p>
       <input type="email" style="width:100%; padding:12px; border-radius:4px; border:none; margin-bottom:10px;">
@@ -782,8 +782,37 @@ function loginAs(role){
 }
 </script>
 
+
+<script>
+const USERS = {
+  "admin@atg.com": { password: "admin123", role: "Admin" },
+  "user@atg.com": { password: "user123", role: "User" }
+};
+
+function simulateLogin(){
+  const email = document.getElementById('loginEmail')?.value;
+  const pass = document.getElementById('loginPass')?.value;
+  const chosenRole = document.getElementById('loginRole')?.value;
+  const err = document.getElementById('loginError');
+  if(!email || !pass) return;
+
+  if(!USERS[email] || USERS[email].password !== pass || USERS[email].role !== chosenRole){
+    if(err) err.style.display='block';
+    return;
+  }
+  if(err) err.style.display='none';
+
+  if(chosenRole === 'Admin'){
+    const admin = document.getElementById('admin-panel');
+    if(admin) admin.style.display='block';
+  }
+  alert("Logged in as " + chosenRole);
+  window.location.hash = '#pro-dashboard';
+}
+</script>
 </body>
 </html>
+
 
 
 
