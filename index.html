@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -370,5 +369,158 @@
 
   <button onclick="toggleDarkMode()" style="position:fixed; bottom:20px; right:20px; background:var(--primary); padding:10px 18px; border:none; border-radius:6px; cursor:pointer; color:white; z-index:999;">Dark Mode</button>
 
+
+
+  <!-- DASHBOARD PRO SECTION -->
+  <section id="dashboard" class="section">
+    <h2>Member Dashboard</h2>
+    <div class="cards" style="gap:25px;">
+
+      <!-- DAILY VIDEO MODULE -->
+      <div class="card" style="border-radius:4px; box-shadow:0 3px 12px rgba(0,0,0,0.3);">
+        <h3 style="color:var(--primary);">Daily Market Video</h3>
+        <p>Watch today's professional market briefing.</p>
+        <a href="#" class="cta-btn" style="margin-top:12px;">Watch Now</a>
+      </div>
+
+      <!-- SIGNALS MODULE -->
+      <div class="card" style="border-radius:4px; box-shadow:0 3px 12px rgba(0,0,0,0.3);">
+        <h3 style="color:var(--primary);">Daily Signals</h3>
+        <p>Institutional-grade setups published daily.</p>
+        <a href="#" class="cta-btn" style="margin-top:12px;">View Signals</a>
+      </div>
+
+      <!-- REPORTS MODULE -->
+      <div class="card" style="border-radius:4px; box-shadow:0 3px 12px rgba(0,0,0,0.3);">
+        <h3 style="color:var(--primary);">Macro Reports</h3>
+        <p>Weekly macroeconomic analysis and key levels.</p>
+        <a href="#" class="cta-btn" style="margin-top:12px;">Open Reports</a>
+      </div>
+
+      <!-- EDUCATION MODULE -->
+      <div class="card" style="border-radius:4px; box-shadow:0 3px 12px rgba(0,0,0,0.3);">
+        <h3 style="color:var(--primary);">Education Library</h3>
+        <p>Full archive of lessons and structured programs.</p>
+        <a href="#" class="cta-btn" style="margin-top:12px;">Enter Library</a>
+      </div>
+
+      <!-- COMMUNITY MODULE -->
+      <div class="card" style="border-radius:4px; box-shadow:0 3px 12px rgba(0,0,0,0.3);">
+        <h3 style="color:var(--primary);">Community Chat</h3>
+        <p>Collaborate with traders from around the world.</p>
+        <a href="#" class="cta-btn" style="margin-top:12px;">Join Chat</a>
+      </div>
+
+      <!-- ACCOUNT SETTINGS MODULE -->
+      <div class="card" style="border-radius:4px; box-shadow:0 3px 12px rgba(0,0,0,0.3);">
+        <h3 style="color:var(--primary);">Account Settings</h3>
+        <p>Manage your profile, billing, and preferences.</p>
+        <a href="#" class="cta-btn" style="margin-top:12px;">Manage Account</a>
+      </div>
+
+    </div>
+  </section>
+
+
+
+  <!-- FULL APP-STYLE DASHBOARD WITH SIDEBAR -->
+  <section id="pro-dashboard" class="section" style="padding:0; max-width:100%;">
+
+    <div style="display:flex; min-height:90vh; background:#0c1015;">
+
+      <!-- SIDEBAR -->
+      <aside style="width:250px; background:#07131c; padding:30px 20px; border-right:1px solid #0f1f2b; position:sticky; top:0; height:100vh;">
+        <h2 style="color:var(--primary); margin-bottom:30px; font-size:22px;">ATG Panel</h2>
+        <nav style="display:flex; flex-direction:column; gap:15px;">
+          <a href="#pro-home" style="color:white; text-decoration:none;">Dashboard Home</a>
+          <a href="#pro-signals" style="color:white; text-decoration:none;">Signals</a>
+          <a href="#pro-videos" style="color:white; text-decoration:none;">Videos</a>
+          <a href="#pro-reports" style="color:white; text-decoration:none;">Reports</a>
+          <a href="#pro-learning" style="color:white; text-decoration:none;">Learning Center</a>
+          <a href="#pro-community" style="color:white; text-decoration:none;">Community</a>
+          <a href="#pro-billing" style="color:white; text-decoration:none;">Billing</a>
+          <a href="#pro-settings" style="color:white; text-decoration:none;">Settings</a>
+        </nav>
+      </aside>
+
+      <!-- DASHBOARD CONTENT AREA -->
+      <div style="flex:1; padding:40px;">
+
+        <!-- DASHBOARD HOME -->
+        <div id="pro-home" class="fade-in visible">
+          <h2 style="color:var(--primary);">Dashboard Overview</h2>
+          <p>Welcome to your professional trading dashboard.</p>
+        </div>
+
+        <!-- SIGNALS DETAILS PAGE MOCKUP -->
+        <div id="pro-signals" class="fade-in" style="margin-top:60px;">
+          <h2 style="color:var(--primary);">Signals</h2>
+          <div class="card" style="border-radius:4px; margin-top:20px;">
+            <h3 style="color:white;">EUR/USD – Long Setup</h3>
+            <p>Institutional orderflow alignment. Entry zone: 1.0830</p>
+            <a href="#" class="cta-btn" style="margin-top:15px;">View Full Breakdown</a>
+          </div>
+        </div>
+
+        <!-- VIDEO PLAYER MOCKUP -->
+        <div id="pro-videos" class="fade-in" style="margin-top:60px;">
+          <h2 style="color:var(--primary);">Daily Video Player</h2>
+          <div class="card" style="border-radius:4px; margin-top:20px;">
+            <div style="width:100%; height:300px; background:#1a1f25; display:flex; justify-content:center; align-items:center; color:#777;">Video Player Placeholder</div>
+          </div>
+        </div>
+
+        <!-- REPORT PAGE MOCKUP -->
+        <div id="pro-reports" class="fade-in" style="margin-top:60px;">
+          <h2 style="color:var(--primary);">Macro Reports</h2>
+          <div class="card" style="border-radius:4px; margin-top:20px;">
+            <h3>Weekly Institutional Report</h3>
+            <p>Macro analysis, liquidity levels, correlations, and sentiment.</p>
+          </div>
+        </div>
+
+        <!-- LEARNING MODULE -->
+        <div id="pro-learning" class="fade-in" style="margin-top:60px;">
+          <h2 style="color:var(--primary);">Learning Center</h2>
+          <div class="card" style="border-radius:4px; margin-top:20px;">
+            <h3>Foundational Course</h3>
+            <p>Market structure, liquidity cycles, institutional logic.</p>
+          </div>
+        </div>
+
+        <!-- COMMUNITY MOCKUP -->
+        <div id="pro-community" class="fade-in" style="margin-top:60px;">
+          <h2 style="color:var(--primary);">Community Chat</h2>
+          <div class="card" style="border-radius:4px; margin-top:20px;">
+            <p>Chat interface placeholder for members discussion.</p>
+          </div>
+        </div>
+
+        <!-- BILLING MOCKUP -->
+        <div id="pro-billing" class="fade-in" style="margin-top:60px;">
+          <h2 style="color:var(--primary);">Billing</h2>
+          <div class="card" style="border-radius:4px; margin-top:20px;">
+            <p>Current Plan: <strong>Monthly – 119€</strong></p>
+            <a href="#" class="cta-btn" style="margin-top:15px;">Update Payment Method</a>
+          </div>
+        </div>
+
+        <!-- SETTINGS MOCKUP -->
+        <div id="pro-settings" class="fade-in" style="margin-top:60px;">
+          <h2 style="color:var(--primary);">Account Settings</h2>
+          <div class="card" style="border-radius:4px; margin-top:20px;">
+            <p>Name:</p>
+            <input type="text" style="width:100%; padding:12px; margin-bottom:10px;">
+            <p>Email:</p>
+            <input type="email" style="width:100%; padding:12px; margin-bottom:10px;">
+            <a href="#" class="cta-btn" style="margin-top:15px;">Save Changes</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
 </body>
 </html>
+
