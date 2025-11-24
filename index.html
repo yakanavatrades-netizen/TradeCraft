@@ -332,7 +332,7 @@
 
   <!-- LOGIN / REGISTER -->
   <section class="section" id="login">
-    <h2>Member Login</h2>
+    <h2>Member Login (Role-Based Access)</h2>
     <div class="card" style="border-radius:4px; max-width:500px; margin:auto;">
       <p>Email:</p>
       <input type="email" style="width:100%; padding:12px; border-radius:4px; border:none; margin-bottom:10px;">
@@ -648,7 +648,142 @@
     }
   </script>
 
+
+
+<!-- TOP NAV MENU -->
+<nav style="position:fixed; top:0; width:100%; background:#07131c; padding:12px 30px; display:flex; justify-content:space-between; align-items:center; z-index:9999; border-bottom:1px solid #12202c;">
+  <div><img src="/mnt/data/A_logo_design_for_Atlantis_Trade_Group_is_displaye.png" style="height:40px;"></div>
+  <div style="display:flex; gap:25px;">
+    <a href="#home" style="color:white; text-decoration:none;">Home</a>
+    <a href="#pro-dashboard" style="color:white; text-decoration:none;">Dashboard</a>
+    <a href="#plans" style="color:white; text-decoration:none;">Plans</a>
+    <a href="#contact" style="color:white; text-decoration:none;">Contact</a>
+    <a href="#login" style="color:var(--primary); text-decoration:none;">Login</a>
+  </div>
+</nav>
+
+<!-- NOTIFICATIONS -->
+<div id="notifications" style="position:fixed; top:80px; right:20px; width:260px; background:#0d1117; color:white; padding:15px; border-radius:6px; display:none; box-shadow:0 4px 18px rgba(0,0,0,0.5); z-index:9999;">
+  <strong>New Alert:</strong> A new trading signal has been published.
+</div>
+<script>
+setTimeout(()=>{
+  document.getElementById('notifications').style.display='block';
+  setTimeout(()=>{document.getElementById('notifications').style.display='none';},5000);
+},3000);
+</script>
+
+<!-- MARKET OVERVIEW -->
+<section class="section" id="market-overview">
+  <h2>Market Overview</h2>
+  <div class="cards">
+    <div class="card" style="border-radius:4px;"><h3>Indices</h3><p>S&P500, NASDAQ, DAX</p></div>
+    <div class="card" style="border-radius:4px;"><h3>Forex</h3><p>Major currency pairs</p></div>
+    <div class="card" style="border-radius:4px;"><h3>Crypto</h3><p>BTC, ETH, SOL</p></div>
+    <div class="card" style="border-radius:4px;"><h3>Commodities</h3><p>Gold, Oil, Silver</p></div>
+  </div>
+</section>
+
+<!-- TRADINGVIEW CHART -->
+<section class="section" id="charts">
+  <h2>Live Chart</h2>
+  <div class="card" style="border-radius:4px; height:400px;">
+    <iframe scrolling="no" allowtransparency="true" frameborder="0" style="width:100%; height:100%;"
+      src="https://s.tradingview.com/widgetembed/?symbol=FX:EURUSD&interval=60&hidesidetoolbar=1&theme=dark"></iframe>
+  </div>
+</section>
+
+<!-- NEWS FEED -->
+<section class="section" id="news">
+  <h2>Financial News</h2>
+  <div class="card" style="border-radius:4px;">
+    <p>- USD gains on macro tension</p>
+    <p>- BTC breaks key resistance</p>
+    <p>- Gold reacts to CPI data</p>
+  </div>
+</section>
+
+<!-- OUR TEAM -->
+<section class="section" id="team">
+  <h2>Our Team</h2>
+  <div class="cards">
+    <div class="card"><h3>John Doe</h3><p>Chief Analyst</p></div>
+    <div class="card"><h3>Maria Ivanova</h3><p>Macro Strategist</p></div>
+    <div class="card"><h3>Daniel Petrov</h3><p>Lead Developer</p></div>
+  </div>
+</section>
+
+<!-- ROADMAP -->
+<section class="section" id="roadmap">
+  <h2>Roadmap & Vision</h2>
+  <div class="card" style="border-radius:4px;">
+    <p>Phase 1 – Platform Launch</p>
+    <p>Phase 2 – Mobile App</p>
+    <p>Phase 3 – AI Market Engine</p>
+  </div>
+</section>
+
+<!-- CONTACT PAGE -->
+<section class="section" id="contact">
+  <h2>Contact Us</h2>
+  <div class="card" style="border-radius:4px;">
+    <p>Email: support@atlantistradegroup.com</p>
+    <p>Hours: Mon–Fri 9:00–18:00</p>
+  </div>
+</section>
+
+<!-- DOWNLOADS MODULE -->
+<section class="section" id="downloads">
+  <h2>Member Downloads</h2>
+  <div class="card" style="border-radius:4px;">
+    <p><a href="#">Weekly Report PDF</a></p>
+    <p><a href="#">Macro Playbook</a></p>
+    <p><a href="#">Trading Checklist</a></p>
+  </div>
+</section>
+
+
+
+<!-- ADMIN PANEL (ONLY FOR ADMIN ROLE) -->
+<section id="admin-panel" class="section" style="display:none;">
+  <h2 style="color:var(--primary);">Admin Panel</h2>
+  <div class="cards" style="gap:25px;">
+    <div class="card" style="border-radius:4px;">
+      <h3>Add New Signal</h3>
+      <p>Create a new trading signal entry.</p>
+      <a href="#" class="cta-btn">Add Signal</a>
+    </div>
+    <div class="card" style="border-radius:4px;">
+      <h3>Upload Video</h3>
+      <p>Upload MP4 for daily briefing.</p>
+      <a href="#" class="cta-btn">Upload Video</a>
+    </div>
+    <div class="card" style="border-radius:4px;">
+      <h3>Upload Report</h3>
+      <p>Add weekly or monthly reports.</p>
+      <a href="#" class="cta-btn">Upload Report</a>
+    </div>
+    <div class="card" style="border-radius:4px;">
+      <h3>User Management</h3>
+      <p>Manage user accounts & roles.</p>
+      <a href="#" class="cta-btn">Manage Users</a>
+    </div>
+  </div>
+</section>
+
+<script>
+// SIMPLE ROLE-BASED ACCESS MOCKUP
+function loginAs(role){
+  if(role === 'Admin'){
+    document.getElementById('admin-panel').style.display = 'block';
+  } else {
+    document.getElementById('admin-panel').style.display = 'none';
+  }
+}
+</script>
+
 </body>
 </html>
+
 
 
