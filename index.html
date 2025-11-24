@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -44,6 +45,22 @@
     /* Fade-in animations */
   .fade-in { opacity:0; transform:translateY(25px); transition:1s ease; }
   .visible { opacity:1 !important; transform:translateY(0) !important; }
+  /* Responsive Layout */
+  @media (max-width: 900px) {
+    header { flex-direction:column; gap:15px; }
+    nav a { margin-left:15px; }
+    .cards { grid-template-columns:1fr; }
+    .section { padding:60px 20px; }
+    .hero h1 { font-size:38px; }
+  }
+  @media (max-width: 600px) {
+    header { padding:15px 20px; }
+    .hero { padding:100px 20px; }
+    .hero h1 { font-size:32px; }
+    .hero p { font-size:16px; }
+    aside { display:none !important; }
+    #pro-dashboard div[style*="flex:1"] { padding:20px !important; }
+  }
 </style>
 </head>
 <body>
@@ -521,6 +538,69 @@
     </div>
   </section>
 
+
+
+  <!-- TELEGRAM STYLE CHAT WIDGET -->
+  <div id="telegramChat" style="position:fixed; bottom:20px; left:20px; width:320px; height:420px; background:#0e1621; border:1px solid #1f2d3a; border-radius:8px; display:none; flex-direction:column; z-index:9999; box-shadow:0 4px 18px rgba(0,0,0,0.5);">
+    <div style="padding:12px; background:#17212b; border-bottom:1px solid #1f2d3a; color:white; font-weight:600;">ATG Support (Telegram Style)</div>
+    <div style="flex:1; padding:12px; overflow-y:auto; color:#cbd3da; font-size:14px;">
+      <p><strong>ATG Bot:</strong> Hello! How can we assist you today?</p>
+    </div>
+    <div style="padding:12px; border-top:1px solid #1f2d3a; display:flex; gap:6px;">
+      <input id="tgInput" type="text" placeholder="Type a message..." style="flex:1; padding:10px; border-radius:6px; border:none; background:#1f2d3a; color:white;">
+      <button onclick="sendTG()" style="background:var(--primary); border:none; padding:10px 14px; border-radius:6px; color:white; cursor:pointer;">Send</button>
+    </div>
+  </div>
+
+  <button onclick="toggleTG()" style="position:fixed; bottom:20px; left:20px; background:var(--accent); padding:12px 18px; border:none; border-radius:50%; color:white; cursor:pointer; z-index:9999;">💬</button>
+
+  <script>
+    function toggleTG(){
+      const box = document.getElementById('telegramChat');
+      box.style.display = box.style.display === 'flex' ? 'none' : 'flex';
+    }
+    function sendTG(){
+      let input = document.getElementById('tgInput');
+      if(input.value.trim() === '') return;
+      const box = document.querySelector('#telegramChat div[style*="overflow-y"]');
+      box.innerHTML += `<p><strong>You:</strong> ${input.value}</p>`;
+      input.value = '';
+    }
+  </script>
+
+  <!-- CHATGPT STYLE AI ASSISTANT -->
+  <div id="aiChat" style="position:fixed; bottom:20px; right:20px; width:360px; height:500px; background:#0d1117; border:1px solid #1a2633; border-radius:8px; display:none; flex-direction:column; z-index:9999; box-shadow:0 4px 18px rgba(0,0,0,0.5);">
+    <div style="padding:12px; background:#131a22; border-bottom:1px solid #1a2633; color:white; font-weight:600;">ATG AI Assistant</div>
+    <div id="aiMessages" style="flex:1; padding:12px; overflow-y:auto; color:#d1d5da; font-size:14px;">
+      <p><strong>AI:</strong> Hello! I'm the Atlantis Trade Group assistant. Ask me anything about trading, memberships, or the dashboard.</p>
+    </div>
+    <div style="padding:12px; border-top:1px solid #1a2633; display:flex; gap:6px;">
+      <input id="aiInput" type="text" placeholder="Ask me something..." style="flex:1; padding:10px; border-radius:6px; border:none; background:#1a2633; color:white;">
+      <button onclick="sendAI()" style="background:var(--primary); border:none; padding:10px 14px; border-radius:6px; color:white; cursor:pointer;">Ask</button>
+    </div>
+  </div>
+
+  <button onclick="toggleAI()" style="position:fixed; bottom:20px; right:20px; background:var(--primary); padding:12px 18px; border:none; border-radius:50%; color:white; cursor:pointer; z-index:9999;">🤖</button>
+
+  <script>
+    function toggleAI(){
+      const box = document.getElementById('aiChat');
+      box.style.display = box.style.display === 'flex' ? 'none' : 'flex';
+    }
+    function sendAI(){
+      let input = document.getElementById('aiInput');
+      if(input.value.trim() === '') return;
+      const box = document.getElementById('aiMessages');
+      box.innerHTML += `<p><strong>You:</strong> ${input.value}</p>`;
+      setTimeout(()=>{
+        box.innerHTML += `<p><strong>AI:</strong> I understand. As an AI placeholder, I can answer pre-scripted responses. The real version will connect to ChatGPT's API.</p>`;
+      },600);
+      box.scrollTop = box.scrollHeight;
+      input.value = '';
+    }
+  </script>
+
 </body>
 </html>
+
 
