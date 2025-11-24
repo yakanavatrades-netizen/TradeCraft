@@ -25,6 +25,7 @@ body{margin:0;font-family:'Inter',sans-serif;background:#0c1015;color:white;}
 <button class="tabBtn" onclick="openTab('reportsTab')">Reports</button>
 <button class="tabBtn" onclick="openTab('learningTab')">Learning</button>
 <button class="tabBtn" onclick="openTab('adminTab')">Admin</button>
+<button class="tabBtn" onclick="openTab('communityTab')">Community</button>
 </div>
 
 <script>
@@ -36,7 +37,7 @@ window.onload=()=>openTab('homeTab');
 <!-- HOME TAB -->
 <div id="homeTab" class="section">
   <h1>Atlantis Trade Group</h1>
-  <p>A private trading circle focused on long-term consistency and professional education.</p>
+  <p>A private trading circle focused on long‑term consistency and professional education.</p>
   <h2>Membership Plans</h2>
   <div class="card">Monthly – 119€</div>
   <div class="card">Quarterly – 300€</div>
@@ -85,6 +86,95 @@ window.onload=()=>openTab('homeTab');
 <h2>Admin Panel</h2>
 <div class="card">Add Signals / Upload Video / Manage Users</div>
 </div>
+
+<!-- COMMUNITY TAB -->
+<div id="communityTab" class="section" style="display:none;">
+<h2>Community Chat</h2>
+<div class="card" style="margin-bottom:30px;">
+<h3>Access Restricted</h3>
+<p>You must have an active membership to access the community chat channels.</p>
+<a href="#plans" class="cta-btn">Upgrade Membership</a>
+</div>
+<div class="card" style="background:#0e1621; padding:0; display:flex; height:500px; border-radius:12px;">
+<!-- CHANNEL LIST -->
+<div style="width:220px; background:#131a22; border-right:1px solid #1f2d3a; padding:15px;">
+<h3 style="margin-bottom:15px; color:var(--primary); font-size:18px;">Channels</h3>
+<p onclick="switchChannel('general')" style="cursor:pointer;"># general</p>
+<p onclick="switchChannel('market')" style="cursor:pointer;"># market-analysis</p>
+<p onclick="switchChannel('setups')" style="cursor:pointer;"># trade-setups</p>
+<p onclick="switchChannel('crypto')" style="cursor:pointer;"># crypto-talk</p>
+<p onclick="switchChannel('support')" style="cursor:pointer;"># support</p>
+</div>
+<!-- CHAT WINDOW -->
+<div style="flex:1; display:flex; flex-direction:column;">
+<div id="communityMessages" style="flex:1; padding:15px; overflow-y:auto; color:#cbd3da;">
+<p><strong>System:</strong> Welcome to the members-only chat. Select a channel to begin.</p>
+</div>
+<div style="padding:12px; border-top:1px solid #1f2d3a; display:flex; gap:6px;">
+<input id="communityInput" type="text" placeholder="Type a message..." style="flex:1; padding:10px; border-radius:6px; border:none; background:#1f2d3a; color:white;">
+<button onclick="sendCommunity()" style="background:var(--primary); border:none; padding:10px 14px; border-radius:6px; color:white; cursor:pointer;">Send</button>
+</div>
+</div>
+</div>
+</div>
+<script>
+let currentChannel = 'general';
+let roles = { user:'Member', admin:'Admin', mod:'Moderator' };
+let activeRole = 'Member';
+
+function switchChannel(ch){
+  currentChannel = ch;
+  const box = document.getElementById('communityMessages');
+  box.innerHTML = `<p><strong>System:</strong> Joined #${ch} channel.</p>`;
+}
+
+function sendCommunity(){
+  let input = document.getElementById('communityInput');
+  if(!input.value.trim()) return;
+  const box = document.getElementById('communityMessages');
+  box.innerHTML += `<p><strong>${activeRole}:</strong> ${input.value}</p>`;
+  input.value = '';
+  box.scrollTop = box.scrollHeight;
+
+  // Simulated realtime reply
+  setTimeout(()=>{
+    box.innerHTML += `<p><strong>Bot:</strong> Message received in #${currentChannel}</p>`;
+    box.scrollTop = box.scrollHeight;
+  }, 700);
+}
+</script>
+<div class="card" style="background:#0e1621; padding:0; display:flex; height:500px; border-radius:12px;">
+<!-- CHANNEL LIST -->
+<div style="width:220px; background:#131a22; border-right:1px solid #1f2d3a; padding:15px;">
+<h3 style="margin-bottom:15px; color:var(--primary); font-size:18px;">Channels</h3>
+<p># general</p>
+<p># market-analysis</p>
+<p># trade-setups</p>
+<p># crypto-talk</p>
+<p># support</p>
+</div>
+<!-- CHAT WINDOW -->
+<div style="flex:1; display:flex; flex-direction:column;">
+<div id="communityMessages" style="flex:1; padding:15px; overflow-y:auto; color:#cbd3da;">
+<p><strong>System:</strong> Welcome to the members-only chat. Join a channel to start talking.</p>
+</div>
+<div style="padding:12px; border-top:1px solid #1f2d3a; display:flex; gap:6px;">
+<input id="communityInput" type="text" placeholder="Type a message..." style="flex:1; padding:10px; border-radius:6px; border:none; background:#1f2d3a; color:white;">
+<button onclick="sendCommunity()" style="background:var(--primary); border:none; padding:10px 14px; border-radius:6px; color:white; cursor:pointer;">Send</button>
+</div>
+</div>
+</div>
+</div>
+<script>
+function sendCommunity(){
+ let input = document.getElementById('communityInput');
+ if(!input.value.trim()) return;
+ const box = document.getElementById('communityMessages');
+ box.innerHTML += `<p><strong>You:</strong> ${input.value}</p>`;
+ input.value = '';
+ box.scrollTop = box.scrollHeight;
+}
+</script>
 
 </body>
 </html>
