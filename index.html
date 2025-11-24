@@ -1,144 +1,79 @@
 <!DOCTYPE html>
-<html lang="bg">
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TradeCraft – Premium Търговия с Опции</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Atlantis Trade Group</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;300;400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body { margin:0; font-family: 'Inter', sans-serif; background:#0b0b0f; color:white; }
+    header { padding:20px 40px; display:flex; justify-content:space-between; align-items:center; }
+    header .logo { font-size:24px; font-weight:700; letter-spacing:1px; }
+    nav a { margin-left:25px; text-decoration:none; color:white; font-size:15px; }
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="style.css">
+    .hero { padding:120px 40px; text-align:center; background:url('https://images.unsplash.com/photo-1520607162513-77705c0f0d4a?auto=format&fit=crop&w=1600&q=60') center/cover no-repeat; }
+    .hero h1 { font-size:52px; margin-bottom:20px; }
+    .hero p { font-size:18px; max-width:700px; margin:0 auto; }
 
-    <!-- JS -->
-    <script src="app.js" defer></script>
+    .section { padding:80px 40px; max-width:1100px; margin:auto; }
+    .section h2 { font-size:36px; margin-bottom:20px; text-align:center; }
+    .cards { display:grid; grid-template-columns:repeat(auto-fit, minmax(250px, 1fr)); gap:25px; }
+    .card { background:#14141a; padding:30px; border-radius:12px; }
+    .card h3 { margin-bottom:10px; }
+
+    footer { margin-top:80px; text-align:center; padding:40px; background:#09090c; color:#aaa; font-size:14px; }
+  </style>
 </head>
-
 <body>
+  <header>
+    <div class="logo">Atlantis Trade Group</div>
+    <nav>
+      <a href="#about">About Us</a>
+      <a href="#videos">Webinars & Videos</a>
+      <a href="#plans">Plans</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
 
-<!-- HEADER -->
-<header>
-    <div class="logo">
-        <img src="assets/img/logo.png" alt="TradeCraft Logo">
-        <span>TradeCraft</span>
+  <section class="hero">
+    <h1>Welcome to Atlantis Trade Group</h1>
+    <p>Your partner in trading education, market insights and investor community growth.</p>
+  </section>
+
+  <section id="about" class="section">
+    <h2>About Us</h2>
+    <p>Atlantis Trade Group is a global trading community offering professional analysis, webinars, tools and trading education for all levels of investors.</p>
+  </section>
+
+  <section id="videos" class="section">
+    <h2>Webinars & Videos</h2>
+    <div class="cards">
+      <div class="card"><h3>Market Overview</h3><p>Weekly market breakdowns and insights.</p></div>
+      <div class="card"><h3>Live Sessions</h3><p>Live educational streaming for members.</p></div>
+      <div class="card"><h3>Strategy Videos</h3><p>Learn technical and fundamental strategies.</p></div>
     </div>
+  </section>
 
-    <div class="lang-switch">
-        <button onclick="setLang('bg')">BG</button>
-        <button onclick="setLang('en')">EN</button>
+  <section id="plans" class="section">
+    <h2>Membership Plans</h2>
+    <div class="cards">
+      <div class="card"><h3>Monthly</h3><p>Access to webinars, videos and community.</p></div>
+      <div class="card"><h3>Quarterly</h3><p>Save more with our 3‑month plan.</p></div>
+      <div class="card"><h3>Annual</h3><p>Full access for 12 months with best pricing.</p></div>
     </div>
-</header>
+  </section>
 
-<!-- HERO -->
-<section class="hero">
-    <h1 data-bg="TradeCraft – Премиум търговия с опции"
-        data-en="TradeCraft – Premium Options Trading Club">
-        TradeCraft – Премиум търговия с опции
-    </h1>
+  <section id="contact" class="section">
+    <h2>Contact Us</h2>
+    <p>Email: support@atlantistradegroup.com</p>
+  </section>
 
-    <p data-bg="Най-доброто място за обучение, сигнали и пазарен анализ."
-       data-en="The best place for training, signals and market analysis.">
-       Най-доброто място за обучение, сигнали и пазарен анализ.
-    </p>
-
-    <a class="btn-primary"
-       href="#pricing"
-       data-bg="Започни 7-дневен безплатен период"
-       data-en="Start 7-Day Free Trial">
-       Започни 7-дневен безплатен период
-    </a>
-</section>
-
-<!-- ABOUT -->
-<section class="section">
-    <h2 data-bg="За нас" data-en="About Us">За нас</h2>
-
-    <p data-bg="TradeCraft е премиум клуб за обучение и стратегии в търговията с опции."
-       data-en="TradeCraft is a premium club for options trading strategies.">
-        TradeCraft е премиум клуб за обучение и стратегии в търговията с опции.
-    </p>
-</section>
-
-<!-- BENEFITS -->
-<section class="section dark">
-    <h2 data-bg="Какво получаваш" data-en="What You Get">Какво получаваш</h2>
-
-    <div class="benefits">
-
-        <div class="card collapsible" data-target="benefit1">
-            <p data-bg="Сигнали за опции в реално време" data-en="Real-time options signals">
-               Сигнали за опции в реално време
-            </p>
-        </div>
-        <div id="benefit1" class="content-box">
-            <p>Тук ще има подробно описание…</p>
-        </div>
-
-        <div class="card collapsible" data-target="benefit2">
-            <p data-bg="Дневен и седмичен пазарен анализ" data-en="Daily & weekly analysis">
-                Дневен и седмичен пазарен анализ
-            </p>
-        </div>
-        <div id="benefit2" class="content-box">
-            <p>Тук ще има подробно описание…</p>
-        </div>
-
-        <div class="card collapsible" data-target="benefit3">
-            <p data-bg="Ексклузивен VIP Telegram канал" data-en="Exclusive VIP channel">
-                Ексклузивен VIP Telegram канал
-            </p>
-        </div>
-        <div id="benefit3" class="content-box">
-            <p>Тук ще има подробно описание…</p>
-        </div>
-
-    </div>
-</section>
-
-<!-- OPTIONS 101 -->
-<section class="section" id="options101">
-    <h2 data-bg="Опции 101 – Какво представляват?" data-en="Options 101 – What Are Options?"></h2>
-
-    <div class="card collapsible" data-target="opt1">
-        <h3 data-bg="CALL опции" data-en="CALL Options"></h3>
-    </div>
-    <div id="opt1" class="content-box">
-        <p data-bg="CALL ти дава правото да купиш актив."
-           data-en="CALL gives you the right to buy an asset."></p>
-    </div>
-
-    <div class="card collapsible" data-target="opt2">
-        <h3 data-bg="PUT опции" data-en="PUT Options"></h3>
-    </div>
-    <div id="opt2" class="content-box">
-        <p data-bg="PUT ти дава правото да продадеш актив."
-           data-en="PUT gives you the right to sell an asset."></p>
-    </div>
-
-</section>
-
-<!-- PRICING -->
-<section id="pricing" class="section">
-    <h2 data-bg="Абонамент" data-en="Subscription">Абонамент</h2>
-
-    <div class="pricing-box">
-        <h3>TradeCraft Premium</h3>
-        <p class="price">49.90€ / месечно</p>
-
-        <ul>
-            <li>7-дневен безплатен пробен период</li>
-            <li>Отказ по всяко време</li>
-            <li>Пълен достъп до всички канали</li>
-        </ul>
-
-        <a class="btn-primary" href="https://buy.stripe.com/9B6dR9dX3ehNg3k4Nh53O02">
-            Започни сега
-        </a>
-    </div>
-</section>
-
-<!-- FOOTER -->
-<footer>
-    <p>© 2025 TradeCraft</p>
-</footer>
-
+  <footer>
+    © 2025 Atlantis Trade Group — All Rights Reserved
+  </footer>
 </body>
 </html>
+
+
