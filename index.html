@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -308,6 +309,16 @@
       <div class="card" style="border-radius:4px;">
         <h3>Pay with Stripe</h3>
         <a class="cta-btn" href="#">Stripe Checkout</a>
+      <!-- Stripe Integration -->
+      <script src="https://js.stripe.com/v3/"></script>
+      <script>
+        const stripe = Stripe('pk_test_your_public_key_here');
+        function stripeCheckout(plan){
+          fetch('/create-checkout-session?plan='+plan)
+            .then(res=>res.json())
+            .then(data=> stripe.redirectToCheckout({ sessionId: data.sessionId }));
+        }
+      </script></a>
       </div>
       <div class="card" style="border-radius:4px;">
         <h3>Pay with PayPal</h3>
@@ -810,9 +821,42 @@ function simulateLogin(){
   window.location.hash = '#pro-dashboard';
 }
 </script>
+
+
+<!-- TABS NAVIGATION -->
+<div id="tabsBar" style="position:fixed; top:60px; width:100%; background:#07131c; padding:12px; display:flex; gap:20px; z-index:9998; border-bottom:1px solid #12202c;">
+  <button class="tabBtn" onclick="openTab('homeTab')" style="background:none; color:white; border:none; cursor:pointer;">Home</button>
+  <button class="tabBtn" onclick="openTab('dashboardTab')" style="background:none; color:white; border:none; cursor:pointer;">Dashboard</button>
+  <button class="tabBtn" onclick="openTab('signalsTab')" style="background:none; color:white; border:none; cursor:pointer;">Signals</button>
+  <button class="tabBtn" onclick="openTab('videosTab')" style="background:none; color:white; border:none; cursor:pointer;">Videos</button>
+  <button class="tabBtn" onclick="openTab('reportsTab')" style="background:none; color:white; border:none; cursor:pointer;">Reports</button>
+  <button class="tabBtn" onclick="openTab('learningTab')" style="background:none; color:white; border:none; cursor:pointer;">Learning</button>
+  <button class="tabBtn" onclick="openTab('adminTab')" style="background:none; color:white; border:none; cursor:pointer;">Admin</button>
+</div>
+
+<script>
+function hideAllTabs(){
+  const tabs = ['homeTab','dashboardTab','signalsTab','videosTab','reportsTab','learningTab','adminTab'];
+  tabs.forEach(id => {
+    const el = document.getElementById(id);
+    if(el) el.style.display = 'none';
+  });
+}
+function openTab(tab){ hideAllTabs(); const t=document.getElementById(tab); if(t) t.style.display='block'; }
+window.onload = ()=>{ openTab('homeTab'); };
+</script>
+
+<!-- TAB WRAPPERS -->
+<div id="homeTab"></div>
+<div id="dashboardTab" style="display:none;"></div>
+<div id="signalsTab" style="display:none;"></div>
+<div id="videosTab" style="display:none;"></div>
+<div id="reportsTab" style="display:none;"></div>
+<div id="learningTab" style="display:none;"></div>
+<div id="adminTab" style="display:none;"></div>
+
 </body>
 </html>
-
 
 
 
